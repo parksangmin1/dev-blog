@@ -102,22 +102,24 @@
         </section>
 
     <!-- JavaScript -->
-        <script src="js/script.js"></script>
-        <script>    
-        const btn = document.querySelector('.btn-menu');
+        <!-- <script src="js/script.js"></script> -->
+        <script>
+            const btn = document.querySelector('.btn-menu');
             // btn.innerHTML = 'test';
-            const nav = document.querySelector('.main-nav')
-            // 버튼을 클릭 했을 때
-            // 1..버튼의 이름이 menu라고 한다면 숨겨져 있던 nav가 나타나야 함 + content가clowe로 변경 되어야 함
-            // 2..
-            btn.addEventListene('click', () => {
-                nav.classList.toggle('open-menu'); 
-                if(btn.innerHTML == 'menu'){
-                    //  nav.classList.add('open-menu');
-                    btn.innerHTML = 'close';
-                }else {
+            const nav = document.querySelector('.main-nav');
+            // 버튼을 클릭을 했을 때!
+            // 1. 버튼의 이름이 Menu라고 한다면! -> 숨겨져 있던
+            //    nav가 화면에 나타나야 함! + Content 가 Close 로 버튼이 변경 되어야 함!
+            // 2.
+
+            btn.addEventListener('click',() =>{
+                nav.classList.toggle('open-menu');
+                if(btn.innerHTML == 'Menu'){
+                    // nav.classList.add('open-menu');
+                    btn.innerHTML = 'Close';
+                }else{
                     // nav.classList.remove('open-menu');
-                    btn.innerHTML = 'Menu';
+                    btn.innerHTML ='Menu';
                 }
             });
 
